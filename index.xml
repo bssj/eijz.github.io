@@ -6,18 +6,29 @@
     <description>Recent content on SSJ</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Sep 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 23 Mar 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://imssj.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Helloworld</title>
-      <link>https://imssj.com/post/helloworld/</link>
-      <pubDate>Wed, 04 Sep 2019 00:00:00 +0000</pubDate>
+      <title>Floatnote</title>
+      <link>https://imssj.com/post/floatnote/</link>
+      <pubDate>Sat, 23 Mar 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://imssj.com/post/helloworld/</guid>
-      <description> hello world ! </description>
+      <guid>https://imssj.com/post/floatnote/</guid>
+      <description>float的本义和特性  一个元素浮动时，其他元素会“环绕”该元素。float会将该元素从正常的文档流中删除，但是该元素依然会影响正常文档流的布局。并且浮动元素的外边距不会发生合并现象。   有如下例子：
+ &amp;lt;div class=&amp;quot;container&amp;quot;&amp;gt; &amp;lt;div class=&amp;quot;floatDiv&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;p&amp;gt;我是很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长很长的一句话&amp;lt;/p&amp;gt; &amp;lt;/div&amp;gt;  CSS:
+ .container{s width:300px; height:150px; border:1px solid; } .floatDiv{ width:50px; height:50px; background-color:brown; float:left; }  效果：
+ ![float0](https://user-images.githubusercontent.com/22383844/62412325-5492b980-b633-11e9-8454-974103f34463.png)   元素设置浮动后，无论是行内元素还是块级元素，都会生成一个块级框，它的行为和表现就和一个正常的块级一样可以设置宽高（display方式flex和grid除外，使用这两种方式时float和clear失效）。
+span{ float:left; width:40px; height:30px; background-color:#f5f519 }  效果：
+ 一旦某个元素设置为浮动后，从正常的文档流中脱离，如果该元素的包含块（也就是包含该元素的最近的祖元素）没有显式的设置高度，就会造成包含块高度没有被撑开的现象。这是因为浮动元素脱离了文档流后，包含块就会认为其内容为空。
+ 如果一个浮动元素和正常流元素发生重叠：当一个行内框和浮动元素重叠时，其边框、背景和内容都会在该浮动元素之上显示；而块级框和浮动元素重叠时，其边框和背景会在浮动元素之下显示，而内容会在浮动元素之上显示。
+   清除浮动 浮动元素会造成包含块的高度塌陷，或者使用时不希望某元素左右出现浮动元素，这时候就要使用某种方式来让浮动被清除或者撑开高度。有如下几种方式可以实现需求：
+ 利用clear属性完成清除浮动。不想受到浮动影响的元素可设置clear:left/right/both 来实现清除左或右的浮动影响。最常用的清除方法为利用伪元素来实现：
+{ display:table; //防止垂直方向边距折叠 content:&amp;quot; &amp;quot;; clear:both; }  可以很好的实现清除浮动的需求,并且撑开了包含块的高度。
+ 利用BFC的特性来达到需求。当一个元素触发BFC后，其子元素在该元素的内部自成一派，不再对外部元素造成影响，并且BFC会计算浮动元素的高度。所以我们可以设置包含块的属性来触发BFC，而在多种触发BFC的方式中，对其他元素影响最小的方式为：
+{ overflow:hidden; }     这种方式可以达到清除float带来的包含块高度塌陷问题。</description>
     </item>
     
   </channel>
