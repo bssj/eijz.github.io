@@ -3,15 +3,42 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://imssj.com/categories/</loc>
+    <loc>https://imssj.com/tags/css/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://imssj.com/post/helloworld/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://imssj.com/tags/html/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://imssj.com/post/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://imssj.com/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://imssj.com/tags/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://imssj.com/tags/test/</loc>
+    <lastmod>2019-09-04T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://imssj.com/categories/</loc>
   </url>
   
 </urlset>
